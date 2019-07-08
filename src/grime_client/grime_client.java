@@ -28,7 +28,7 @@ import javax.swing.UIManager.LookAndFeelInfo;
 public class grime_client {
   boolean packFrame = false;
 
-  // Construct the application
+  // Construct the application.
   public grime_client() {
     Client_Frame frame = new Client_Frame();
     // Validate frames that have preset sizes
