@@ -46,11 +46,11 @@ import javax.swing.ListSelectionModel;
  * <p>
  * Company: N/A
  * </p>
- * 
+ *
  * @author Megaspaz
  * @version 1.0
  */
-@SuppressWarnings( "deprecation" )
+@SuppressWarnings("deprecation")
 public class Client_Frame extends JFrame implements Runnable {
   private static final long serialVersionUID = 1L;
   private JPanel contentPane;
@@ -86,7 +86,7 @@ public class Client_Frame extends JFrame implements Runnable {
   private JButton jButton_roll = new JButton();
   private JLabel jLabel9 = new JLabel();
   private JTextField jTextField_numdie = new JTextField();
-  private JList<String> jList_players = new JList<String> ();
+  private JList<String> jList_players = new JList<String>();
   private JLabel jLabel10 = new JLabel();
   private JTextField jTextField_player_alias = new JTextField();
   private JButton jButton_clear = new JButton();
@@ -340,6 +340,7 @@ public class Client_Frame extends JFrame implements Runnable {
   // Overridden so we can exit when window is closed in title bar
   // like clicking the close button ("X") in corner of title bar or
   // by using the close window key combo to close program window (ctrl-F4)
+  @Override
   protected void processWindowEvent(WindowEvent e) {
     super.processWindowEvent(e);
     if (e.getID() == WindowEvent.WINDOW_CLOSING) {
@@ -452,6 +453,7 @@ public class Client_Frame extends JFrame implements Runnable {
    * alias fails 6 = server forces all clients to close - admin closes server File
    * > Exit
    */
+  @Override
   public void run() {
     int close_type = 0;
     Thread thisThread = Thread.currentThread();
@@ -829,6 +831,7 @@ class Client_Frame_jMenuItem2_actionAdapter implements java.awt.event.ActionList
     this.adaptee = adaptee;
   }
 
+  @Override
   public void actionPerformed(ActionEvent e) {
     adaptee.jMenuItem2_actionPerformed(e);
   }
@@ -841,6 +844,7 @@ class Client_Frame_jMenuItem3_actionAdapter implements java.awt.event.ActionList
     this.adaptee = adaptee;
   }
 
+  @Override
   public void actionPerformed(ActionEvent e) {
     adaptee.jMenuItem3_actionPerformed(e);
   }
@@ -853,6 +857,7 @@ class Client_Frame_jButton_connect_actionAdapter implements java.awt.event.Actio
     this.adaptee = adaptee;
   }
 
+  @Override
   public void actionPerformed(ActionEvent e) {
     adaptee.jButton_connect_actionPerformed(e);
   }
@@ -865,6 +870,7 @@ class Client_Frame_jButton_send_actionAdapter implements java.awt.event.ActionLi
     this.adaptee = adaptee;
   }
 
+  @Override
   public void actionPerformed(ActionEvent e) {
     adaptee.jButton_send_actionPerformed(e);
   }
@@ -877,10 +883,12 @@ class Client_Frame_jTextArea_chat_input_keyAdapter extends java.awt.event.KeyAda
     this.adaptee = adaptee;
   }
 
+  @Override
   public void keyPressed(KeyEvent e) {
     adaptee.jTextArea_chat_input_keyPressed(e);
   }
 
+  @Override
   public void keyReleased(KeyEvent e) {
     adaptee.jTextArea_chat_input_keyReleased(e);
   }
@@ -893,6 +901,7 @@ class Client_Frame_jButton_clear_actionAdapter implements java.awt.event.ActionL
     this.adaptee = adaptee;
   }
 
+  @Override
   public void actionPerformed(ActionEvent e) {
     adaptee.jButton_clear_actionPerformed(e);
   }
@@ -905,6 +914,7 @@ class Client_Frame_jTextField_player_alias_actionAdapter implements java.awt.eve
     this.adaptee = adaptee;
   }
 
+  @Override
   public void actionPerformed(ActionEvent e) {
     adaptee.jTextField_player_alias_actionPerformed(e);
   }
@@ -917,6 +927,7 @@ class Client_Frame_jTextField_url_actionAdapter implements java.awt.event.Action
     this.adaptee = adaptee;
   }
 
+  @Override
   public void actionPerformed(ActionEvent e) {
     adaptee.jTextField_url_actionPerformed(e);
   }
@@ -929,6 +940,7 @@ class Client_Frame_jButton_disconnect_actionAdapter implements java.awt.event.Ac
     this.adaptee = adaptee;
   }
 
+  @Override
   public void actionPerformed(ActionEvent e) {
     adaptee.jButton_disconnect_actionPerformed(e);
   }
@@ -941,6 +953,7 @@ class Client_Frame_jButton_roll_actionAdapter implements java.awt.event.ActionLi
     this.adaptee = adaptee;
   }
 
+  @Override
   public void actionPerformed(ActionEvent e) {
     adaptee.jButton_roll_actionPerformed(e);
   }
@@ -953,6 +966,7 @@ class Client_Frame_jTextField_numdie_actionAdapter implements java.awt.event.Act
     this.adaptee = adaptee;
   }
 
+  @Override
   public void actionPerformed(ActionEvent e) {
     adaptee.jTextField_numdie_actionPerformed(e);
   }
@@ -965,6 +979,7 @@ class Client_Frame_jButton_clear_dice_actionAdapter implements java.awt.event.Ac
     this.adaptee = adaptee;
   }
 
+  @Override
   public void actionPerformed(ActionEvent e) {
     adaptee.jButton_clear_dice_actionPerformed(e);
   }
@@ -977,6 +992,7 @@ class Client_Frame_jMenuItem1_actionAdapter implements java.awt.event.ActionList
     this.adaptee = adaptee;
   }
 
+  @Override
   public void actionPerformed(ActionEvent e) {
     adaptee.jMenuItem1_actionPerformed(e);
   }
